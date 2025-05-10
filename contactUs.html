@@ -395,6 +395,45 @@ footer {
     padding: 10px;
   }
 }
+.maps-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.map {
+  flex: 1 1 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* On medium and larger screens, show side-by-side */
+@media (min-width: 768px) {
+  .map {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .map iframe {
+    height: 400px;
+  }
+}
+
+/* Optional: larger height on desktop */
+@media (min-width: 1200px) {
+  .map iframe {
+    height: 450px;
+  }
+}
+
 
     </style>
 </head>
