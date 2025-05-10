@@ -361,6 +361,41 @@ footer {
         min-width: 100%;
     }
 }
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.contact-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  margin: 5px 0;
+}
+
+.phone {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* Optional: adjust layout spacing on very small screens */
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 10px;
+  }
+}
+
     </style>
 </head>
 <body>
