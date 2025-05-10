@@ -74,54 +74,68 @@
         }
 
         /* Header Styles */
-        .top-bar {
-            background-color: #2c4159;
-            color: white;
-            padding: 5px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .phone-number {
-            margin-left: 20px;
-            font-size: 14px;
-        }
-
-        .free-assessment {
-            background-color: #00b0f0;
-            color: white;
-            padding: 5px 15px;
-            margin-right: 20px;
-            text-decoration: none;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+}
 
-        .logo {
-            width: 250px;
-        }
+.logo {
+    width: 250px;
+}
 
-        .nav {
-            display: flex;
-        }
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-        .nav a {
-            text-decoration: none;
-            color: #333;
-            margin-left: 20px;
-            text-transform: uppercase;
-            font-size: 14px;
-            font-weight: bold;
-        }
+.nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ✅ Hide toggle button by default */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+/* ✅ Responsive styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav a {
+        margin: 10px 20px;
+    }
+
+    .header {
+        align-items: flex-start;
+    }
+}
+
 
         /* Hero Section */
         .hero {
@@ -597,29 +611,40 @@
                 color: #0099cc;
             }
 
-
+            /* .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 5%;
+        } */
         }
     </style>
 
-    <div class="top-bar">
+    <!-- <div class="top-bar">
         <div class="phone-number">+91 9072511111</div>
-        <a href="#" class="free-assessment">🔍 FREE ASSESSMENT</a>
-    </div>
+        <div><a href="#" class="free-assessment">🔍 FREE ASSESSMENT</a></div>
+    </div> -->
 
-    <header class="header">
-        <div class="logo-container">
+   <header class="header">
+    <div class="logo-container">
+        <a href="index.html">
             <img src="/assets/logo.webp" alt="Axis Overseas Careers" class="logo">
-        </div>
-        <nav class="nav">
-            <a href="#">Immigration</a>
-            <a href="#">Work</a>
-            <a href="#">Sponsor</a>
-            <a href="#">Business</a>
-            <a href="#">Study Abroad</a>
-            <a href="#">Services</a>
-            <a href="#">Resources</a>
-        </nav>
-    </header>
+        </a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <nav class="nav" id="nav-menu">
+        <a href="#">Immigration</a>
+        <a href="#">Work</a>
+        <a href="#">Sponsor</a>
+        <a href="#">Business</a>
+        <a href="#">Study Abroad</a>
+        <a href="#">Services</a>
+        <a href="#">Resources</a>
+    </nav>
+</header>
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -944,6 +969,15 @@
             </div>
         </div>
     </footer>
+    <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    toggleButton.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+</script>
+
 </body>
 
 </html>
