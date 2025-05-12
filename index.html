@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Immigration Services</title>
+    <title>Indianish overseas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
 </head>
 
 <body>
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -19,9 +24,11 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family:  'Quicksand', sans-serif;
             line-height: 1.6;
             color: #333;
+            
+
         }
 
         .container {
@@ -49,7 +56,7 @@
             background-color: transparent;
             color: white;
             padding: 10px 20px;
-            border-radius: 20%;
+            border-radius: 20px;
             border: 2px solid white;
             /* Yeh line change ki gayi hai */
             transition: background-color 0.3s;
@@ -75,66 +82,64 @@
 
         /* Header Styles */
         .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    border-bottom: 1px solid #eee;
-    flex-wrap: wrap;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px;
+            border-bottom: 1px solid #eee;
+            flex-wrap: wrap; 
+        }
 
-.logo {
-    width: 250px;
-}
+        .logo {
+            width: 250px;
+        }
 
-.nav {
-    display: flex;
-    flex-wrap: wrap;
-}
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-.nav a {
-    text-decoration: none;
-    color: #333;
-    margin-left: 20px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-}
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+        }
 
-/* ✅ Hide toggle button by default */
-.menu-toggle {
-    display: none;
-    font-size: 26px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-}
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+        }
 
-/* ✅ Responsive styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
 
-    .nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
+            .nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
 
-    .nav.show {
-        display: flex;
-    }
+            .nav.show {
+                display: flex;
+            }
 
-    .nav a {
-        margin: 10px 20px;
-    }
+            .nav a {
+                margin: 10px 20px;
+            }
 
-    .header {
-        align-items: flex-start;
-    }
-}
+            .header {
+                align-items: flex-start;
+            }
+        }
 
 
         /* Hero Section */
@@ -272,7 +277,7 @@
 
         /* IELTS Section */
         .ielts {
-            background-color: #0099cc;
+            background: linear-gradient(to right, rgb(66, 1, 90), rgb(255, 137, 8)); 
             color: white;
         }
 
@@ -308,8 +313,8 @@
         }
 
         .ielts .btn {
-            background-color: white;
-            color: #0099cc;
+            background: linear-gradient(to right, rgb(66, 1, 90), rgb(255, 137, 8)); 
+            color: white;
             margin-top: 20px;
         }
 
@@ -467,7 +472,8 @@
 
         /* Footer */
         footer {
-            background-color: #222;
+            background: linear-gradient(to right, rgb(66, 1, 90), rgb(255, 137, 8)); 
+            /* background-color: #222; */
             color: #ddd;
             padding: 60px 0 20px;
         }
@@ -605,21 +611,12 @@
             .footer-column {
                 min-width: 100%;
             }
-
-            .fa-plane {
-                font-size: 50px;
-                color: #0099cc;
-            }
-
-            /* .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px 5%;
-        } */
         }
+         .feature i{
+           font-size: 40px;
+           padding: 10px;
+           color: #0099cc;
+       }
     </style>
 
     <!-- <div class="top-bar">
@@ -627,23 +624,23 @@
         <div><a href="#" class="free-assessment">🔍 FREE ASSESSMENT</a></div>
     </div> -->
 
-   <header class="header">
-    <div class="logo-container">
-        <a href="index.html">
-            <img src="/assets/logo.webp" alt="Axis Overseas Careers" class="logo">
-        </a>
-    </div>
-    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-    <nav class="nav" id="nav-menu">
-        <a href="#">Immigration</a>
-        <a href="#">Work</a>
-        <a href="#">Sponsor</a>
-        <a href="#">Business</a>
-        <a href="#">Study Abroad</a>
-        <a href="#">Services</a>
-        <a href="#">Resources</a>
-    </nav>
-</header>
+    <header class="header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="/assets/logo.jpg" alt="Axis Overseas Careers" class="logo">
+            </a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <nav class="nav" id="nav-menu">
+            <a href="#">Immigration</a>
+            <a href="#">Work</a>
+            <a href="#">Sponsor</a>
+            <a href="#">Business</a>
+            <a href="#">Study Abroad</a>
+            <a href="#">Services</a>
+            <a href="#">Resources</a>
+        </nav>
+    </header>
 
 
     <!-- Hero Section -->
@@ -708,10 +705,6 @@
                 <div class="feature">
                     <i class="icons fa-solid fa-id-card"></i>
                     <h3>Work Permit Benefits</h3>
-                </div>
-                <div class="feature">
-                    <i class="icons fa-solid fa-plane"></i>
-                    <h3>Express Immigration</h3>
                 </div>
                 <div class="feature">
                     <i class="icons fa-solid fa-house-user"></i>
@@ -857,7 +850,7 @@
                 <div class="attestation-type">
                     <h3>Attestation of Personal Documents such as:</h3>
                     <ul>
-                         <li><i class="fas fa-check tick-icon"></i> Degree Certificate (Bachelors, Masters, Doctorate)
+                        <li><i class="fas fa-check tick-icon"></i> Degree Certificate (Bachelors, Masters, Doctorate)
                         </li>
                         <li><i class="fas fa-check tick-icon"></i> High School Certificate (10, 12, Grades)</li>
                         <li><i class="fas fa-check tick-icon"></i> Diploma Certificate</li>
@@ -868,7 +861,7 @@
                 <div class="attestation-type">
                     <h3>Attestation of Police Documents/Good Conduct Certificate such as:</h3>
                     <ul>
-                          <li><i class="fas fa-check tick-icon"></i> Degree Certificate (Bachelors, Masters, Doctorate)
+                        <li><i class="fas fa-check tick-icon"></i> Degree Certificate (Bachelors, Masters, Doctorate)
                         </li>
                         <li><i class="fas fa-check tick-icon"></i> High School Certificate (10, 12, Grades)</li>
                         <li><i class="fas fa-check tick-icon"></i> Diploma Certificate</li>
@@ -970,14 +963,15 @@
         </div>
     </footer>
     <script>
-    const toggleButton = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+        const toggleButton = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
 
-    toggleButton.addEventListener('click', () => {
-        navMenu.classList.toggle('show');
-    });
-</script>
-
+        toggleButton.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </body>
 
 </html>
