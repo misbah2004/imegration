@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indianish overseas</title>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 
 
 
@@ -240,6 +239,42 @@
             font-weight: 600;
             color: #005281;
         }
+        .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    transition: all 0.6s ease;
+}
+
+.service-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Animation trigger when in viewport */
+.service-card.animate {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
 
         /* Experience Section */
         .experience {
@@ -726,6 +761,20 @@
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
         }
+        /* animation */
+        /* Common initial animation style for all cards */
+.animated-card {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    transition: all 0.6s ease;
+}
+
+/* When element comes into view */
+.animated-card.animate {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
     </style>
 
     <!-- <div class="top-bar">
@@ -765,7 +814,7 @@
     </section>
 
     <!-- Services Overview -->
-    <section class="services-overview">
+    <section class="services-overview animated-card">
         <div class="container">
             <h2>Immigration And Study Abroad Consultants</h2>
 
@@ -790,10 +839,8 @@
         </div>
     </section>
 
-
-
     <!-- Experience Section -->
-    <section class="experience">
+    <section class="experience animated-card">
         <div class="container">
             <div class="experience-content">
                 <h2>12 Years of Experience in Education and Immigration Consultation Services</h2>
@@ -827,7 +874,7 @@
         </div>
     </section>
     <!-- Countries Section -->
-    <section class="countries">
+    <section class="countries animated-card">
         <div class="container">
             <div class="country-flags">
                 <div class="country">
@@ -859,7 +906,7 @@
     </section>
 
     <!-- IELTS Section -->
-    <section class="ielts">
+    <section class="ielts animated-card">
         <div class="container">
             <div class="ielts-content">
                 <h2>IELTS Academic & General Training</h2>
@@ -879,7 +926,7 @@
     </section>
 
     <!-- Attestation Services -->
-    <section class="attestation">
+    <section class="attestation animated-card">
         <div class="container">
             <h2>Our Globally Covered Attestation Services</h2>
             <div class="attestation-logos">
@@ -912,7 +959,7 @@
     </section>
 
     <!-- Our Services Section -->
-    <section class="our-services">
+    <section class="our-services animated-card">
         <div class="container">
             <h2>Our Services</h2>
             <div class="service-icons">
@@ -944,7 +991,7 @@
         </div>
     </section>
     <!-- Document Attestation -->
-    <section class="document-attestation">
+    <section class="document-attestation animated-card">
         <div class="container">
             <h2>Document Attestation We Can Assist You With</h2>
             <div class="attestation-types">
@@ -986,7 +1033,7 @@
     </section>
 
     <!-- Latest News -->
-    <section class="latest-news">
+    <section class="latest-news animated-card   ">
         <div class="container">
             <h2>Latest News</h2>
             <div class="owl-carousel news-cards">
@@ -1116,7 +1163,19 @@
         toggleButton.addEventListener('click', () => {
             navMenu.classList.toggle('show');
         });
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
 
+    document.querySelectorAll('.animated-card').forEach(card => {
+        observer.observe(card);
+    });
 
 
     </script>
