@@ -206,7 +206,8 @@
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            width: 200px;
+            width: 250px;
+            height: 300px;
             transition: transform 0.3s;
         }
 
@@ -311,7 +312,7 @@
 
         /* IELTS Section */
         .ielts {
-            background: linear-gradient(to right, rgb(66, 1, 90), rgb(255, 137, 8));
+            background: linear-gradient(to right, #c0c0c0, #d4d4d4, #e6d4b1);
             color: white;
         }
 
@@ -326,17 +327,22 @@
             min-width: 300px;
             padding-right: 40px;
         }
-
+        .ielts-content h2{
+            color: black;
+        }
         .ielts-buttons {
             display: flex;
             gap: 10px;
             margin-bottom: 20px;
             flex-wrap: wrap;
         }
+        .ielts-content p{
+            color: black;
+        }
 
         .ielts-btn {
             background-color: rgba(255, 255, 255, 0.2);
-            color: white;
+            color: black;
             padding: 8px 15px;
             border-radius: 20px;
             font-size: 14px;
@@ -356,6 +362,13 @@
             flex: 1;
             min-width: 300px;
             text-align: center;
+        }
+
+        .ielts-image img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            /* Ya contain, depend karta hai requirement pe */
         }
 
         /* Attestation Services */
@@ -683,34 +696,36 @@
         .read-more:hover {
             color: #0056b3;
         }
+
         .owl-carousel .news-card {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-}
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
 
-.news-cards {
-  display: block; /* Flex ya Grid mat rakhein yahan */
-}
+        .news-cards {
+            display: block;
+            /* Flex ya Grid mat rakhein yahan */
+        }
 
-.news-card img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 10px;
-}
+        .news-card img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
 
-.news-card h3 {
-  font-size: 16px;
-  line-height: 1.4;
-  height: 3.5em; /* 2 lines limit */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
+        .news-card h3 {
+            font-size: 16px;
+            line-height: 1.4;
+            height: 3.5em;
+            /* 2 lines limit */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
     </style>
 
     <!-- <div class="top-bar">
